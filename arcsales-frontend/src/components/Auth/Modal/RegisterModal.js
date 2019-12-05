@@ -17,7 +17,7 @@ function RegisterModal(props) {
 
         <Modal show={isShowing} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Register</Modal.Title>
+                <Modal.Title>ArcSales-Register</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <div className="container mt-4">

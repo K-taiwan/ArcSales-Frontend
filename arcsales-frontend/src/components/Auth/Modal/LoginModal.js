@@ -17,7 +17,7 @@ function LoginModal (props) {
 
         <Modal show={isShowing} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Login</Modal.Title>
+                <Modal.Title>ArcSales-Login</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <div className="container mt-4">
