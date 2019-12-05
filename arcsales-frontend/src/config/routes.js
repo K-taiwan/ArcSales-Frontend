@@ -1,12 +1,14 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Splash from '../components/Splash/Splash';
-// import Login from '../components/Auth/Login';
-// import Register from '../components/Auth/Register';
+import Profile from '../components/Profile/Profile';
+import Car from '../components/Car/Car';
 
 export default ({currentUser, setCurrentUser}) => (
     <Switch>
         <Route exact path='/' component={Splash} />
+        <Route path='/profile' component={Profile} />
+        <Route path='/car' component={Car} />
     </Switch>
 );
 
