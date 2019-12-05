@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import Routes from './config/routes';
-import Navbar from './components/Navbar/Navbar';
+import Navy from './components/Navy/Navy';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -36,7 +36,7 @@ class App extends Component {
     render() {
       return (
         <>
-          <Navbar currentUser={this.state.currentUser} logout={this.logout} setCurrentUser={this.setCurrentUser} />
+          <Navy currentUser={this.state.currentUser} logout={this.logout} setCurrentUser={this.setCurrentUser} />
           <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
         </>
       );

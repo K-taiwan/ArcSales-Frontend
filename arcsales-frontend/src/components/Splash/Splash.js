@@ -6,10 +6,11 @@ const Splash =() => {
     return(
         <>
             <main>
-                <h1>ArcSales</h1>
+                <h1>Splash ArcSales</h1>
+                <div>img</div>
             </main>
             <footer className="text-muted text-center">
-                <p className="mb-1">© 2019 <span className="arc-footer">Wayfarer</span></p>
+                <p className="mb-1">© 2019 <span className="arc-footer">ArcSales</span></p>
                     <span className="icon"></span>
                     <span className="icon"></span>
                     <span className="icon"></span>
