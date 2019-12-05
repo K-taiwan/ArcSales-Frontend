@@ -5,9 +5,9 @@ import Button from 'react-bootstrap/Button';
 import './LoginModal.css';
 
 function LoginModal (props) {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [isShowing, setIsShowing] = useState(false);
+    const handleClose = () => setIsShowing(false);
+    const handleShow = () => setIsShowing(true);
 
     return (
         <>
@@ -15,7 +15,7 @@ function LoginModal (props) {
             Login
         </Button>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={isShowing} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Login</Modal.Title>
             </Modal.Header>
