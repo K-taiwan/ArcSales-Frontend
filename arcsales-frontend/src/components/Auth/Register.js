@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import axios from "axios";
 import RegisterModal from './Modal/RegisterModal';
 
-class Register extends React.Component {
+class Register extends Component {
     state = {
       firstName: '',
       lastName: '',

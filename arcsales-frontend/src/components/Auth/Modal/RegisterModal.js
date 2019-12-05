@@ -5,17 +5,17 @@ import Button from "react-bootstrap/Button";
 import './RegisterModal';
 
 function RegisterModal(props) {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    
+    const [isShowing, setIsShowing] = useState(false);
+    const handleClose = () => setIsShowing(false);
+    const handleShow = () => setIsShowing(true);
+
     return (
         <>
         <Button variant="primary" onClick={handleShow}>
             Register
         </Button>
 
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={isShowing} onHide={handleClose}>
             <Modal.Header closeButton>
                 <Modal.Title>Register</Modal.Title>
             </Modal.Header>
