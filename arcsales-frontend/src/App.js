@@ -11,7 +11,6 @@ class App extends Component {
       currentUser: localStorage.getItem('uid'),
     }
 
-
     setCurrentUser = (userId) => {
       console.log(userId);
       this.setState({

@@ -23,14 +23,15 @@ class Register extends Component {
         withCredentials: true,
       })
       .then((res) => {
-        this.setState({
-          firstName: '',
-          lastName: '',
-          email: '',
-          password: '',
-          password2: '',
-        });
-        this.props.history.push('/login');
+        console.log(res);
+        // this.setState({
+        //   firstName: '',
+        //   lastName: '',
+        //   email: '',
+        //   password: '',
+        //   password2: '',
+        // });
+        // this.props.history.push('/login');
       })
       .catch((err) => console.log(err))
 
