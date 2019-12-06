@@ -28,7 +28,7 @@ function AddCarModal(props) {
                         <label htmlFor="model">Model</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="Model" name="model" value={props.car.model} />
                     </div>
-                    {/* <div className="form-group">
+                    <div className="form-group">
                         <label htmlFor="brand">Brand</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="text" id="Brand" name="brand" value={props.car.brand} />
                     </div>
@@ -55,7 +55,7 @@ function AddCarModal(props) {
                     <div className="form-group">
                         <label htmlFor="image">Image</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="file" id="Image" name="image" accept="image/png, image/jpeg" value={props.car.image} />
-                    </div> */}
+                    </div>
                     <button id="login-button" onClick={handleClose} className="btn btn-primary float-right" type="submit">AddCar</button>
                     </form>
                 </div>
