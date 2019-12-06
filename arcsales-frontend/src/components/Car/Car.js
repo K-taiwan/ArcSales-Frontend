@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import './Car.css';
 
 const Car = () => {
+    
     return (
         <section>
             <h1>Test Car Page</h1>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from "react-bootstrap/Button";
 
-import './RegisterModal';
+import './RegisterModal.css';
 
 function RegisterModal(props) {
     const [isShowing, setIsShowing] = useState(false);
@@ -22,7 +22,7 @@ function RegisterModal(props) {
             <Modal.Body>
                 <div className="container mt-4">
                     <div className="row">
-                    <div className="col-md-4 offset-md-4">
+                    <div className="col">
                         <form onSubmit={props.handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="firstName">First Name</label>
