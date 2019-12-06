@@ -67,8 +67,8 @@ class ProfileContainer extends Component {
                 
             
                 <div className="col wrap grid-wrapper">
-                    RightSide
-                    <AddCarsContainer />
+                    RightSide, Why is it not showing up?????
+                    {this.state.car && <AddCarsContainer AddCar={this.AddCar}/>}
                     
                 </div>
             </section>
