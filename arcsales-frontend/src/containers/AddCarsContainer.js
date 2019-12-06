@@ -18,14 +18,17 @@ class AddCarsContainer extends Component {
              });
          })
          .catch((err) => console.log(err));
-    }
-         // GET USER CARS
-        // axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`, {
-        //     withCredentials: true,
-        // })
-        //     .then(res => console.log(res))
-        //     .catch(err => console.log(err));
-        // }
+
+         axios.get(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+            withCredentials: true,
+        })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+        }
+    
+        
+      // GET USER CARS
+
 
     // componentDidUpdate(){
     //     const userId = localStorage.getItem('uid');
@@ -49,7 +52,8 @@ class AddCarsContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    {this.state.car && <AddCar car={this.state}/>}
+                    {/* {this.state.car && <AddCar car={this.state}/>} */}
+                    <AddCar />
                 </div>
             </section>
 
