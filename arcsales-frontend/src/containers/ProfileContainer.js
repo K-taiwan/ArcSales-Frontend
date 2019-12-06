@@ -18,10 +18,19 @@ class ProfileContainer extends Component {
              });
          })
          .catch((err) => console.log(err));
+
+
+         // GET USER CARS
+        axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`, {
+            withCredentials: true,
+        })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
     }
 
     componentDidUpdate(){
         const userId = localStorage.getItem('uid');
+        // GET USER PROFILE
         axios.get(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
             withCredentials: true,
         })
@@ -30,7 +39,8 @@ class ProfileContainer extends Component {
                     profile: res.data.data
                 });
             })
-            .catch((err) => console.log(err));       
+            .catch((err) => console.log(err));
+           
     }
 
     updateProfile = (updatedProfile) => {
@@ -42,15 +52,26 @@ class ProfileContainer extends Component {
     render() {
         return (
             <>
-            <div className="col">
-                <section>
-                    <div className="wrap grid-wrapper">
-                       {this.state.profile && <Profile profile={this.state.profile} updateProfile={this.updateProfile}/>}
-                    </div>
-                </section> 
-            </div>
-
+            <section className="col">
+                <div className="wrap grid-wrapper">
+                    {this.state.profile && <Profile profile={this.state.profile} updateProfile={this.updateProfile}/>}
+                </div>
+            </section>
+            <br></br>
+            <section className="row">
+                <div className="col wrap grid-wrapper">
+                    LeftSide
+                </div>
+        
+                
             
+                <div className="col wrap grid-wrapper">
+                    RightSide
+                    Add Cars
+                    
+                </div>
+            </section>
+
             </>
         )
     }
