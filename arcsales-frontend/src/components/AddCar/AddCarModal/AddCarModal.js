@@ -17,7 +17,7 @@ function AddCarModal(props) {
 
         <Modal show={isShowing} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>ArcSales-Edit</Modal.Title>
+                <Modal.Title>ArcSales-AddCar</Modal.Title>
             </Modal.Header>
             <Modal.Body>
             <div className="container mt-4">
