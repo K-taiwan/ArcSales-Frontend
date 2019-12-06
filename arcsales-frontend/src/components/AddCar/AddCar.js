@@ -38,6 +38,7 @@ class AddCar extends Component {
         <AddCarModal 
         handleChange={this.handleChange} 
         handleSubmit={this.handleSubmit} 
+        car={this.state}
         user={this.state} 
         model={this.state.model}
         brand={this.state.brand}
