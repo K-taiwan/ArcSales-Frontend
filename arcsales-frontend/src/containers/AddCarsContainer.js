@@ -50,7 +50,7 @@ class AddCarsContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    {this.state.car && <AddCar profile={this.state.car}/>}
+                    {this.state.car && <AddCar car={this.state}/>}
                 </div>
             </section>
 
