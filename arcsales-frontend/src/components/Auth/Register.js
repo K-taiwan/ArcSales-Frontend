@@ -39,7 +39,7 @@ class Register extends Component {
 
     render() {
       return (
-        <RegisterModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state} emailDup={this.state.emailDup}/>
+        <RegisterModal handleChange={this.handleChange} handleSubmit={this.handleSubmit} user={this.state} email={this.state.email}/>
        )
     }
 }

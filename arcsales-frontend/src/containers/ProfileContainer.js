@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from '../components/Profile/Profile';
+import AddCarsContainer from './AddCarsContainer';
 import axios from 'axios';
 
 class ProfileContainer extends Component {
@@ -14,7 +15,7 @@ class ProfileContainer extends Component {
         })
          .then((res) => {
              this.setState({
-                 profile: res.data.data,
+                profile: res.data.data,
              });
          })
          .catch((err) => console.log(err));
@@ -67,7 +68,7 @@ class ProfileContainer extends Component {
             
                 <div className="col wrap grid-wrapper">
                     RightSide
-                    Add Cars
+                    <AddCarsContainer />
                     
                 </div>
             </section>
