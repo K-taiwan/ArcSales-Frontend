@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import {withRouter} from 'react-router-dom'
+// import {withRouter} from 'react-router-dom'
 import axios from "axios";
 import AddCarModal from './AddCarModal/AddCarModal';
 
@@ -8,7 +8,7 @@ class AddCar extends Component {
       model: '',
       brand: '',
       year: '',
-      new: '',
+      new: false,
       price: '',
       color: '',
       image: ''
@@ -22,6 +22,8 @@ class AddCar extends Component {
 
     handleSubmit = event => {
       event.preventDefault();
+      console.log(this.state);
+    //   const userId = localStorage.getItem('uid');
       axios.post(`${process.env.REACT_APP_API_URL}/cars/new`, this.state, {
         withCredentials: true,
       })
@@ -52,4 +54,4 @@ class AddCar extends Component {
     }
 }
 
-export default withRouter(AddCar);
+export default AddCar;

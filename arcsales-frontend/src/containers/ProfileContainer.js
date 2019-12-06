@@ -67,9 +67,7 @@ class ProfileContainer extends Component {
                 
             
                 <div className="col wrap grid-wrapper">
-                    RightSide, Why is it not showing up?????
-                    <AddCarsContainer />
-                    
+                    Your Car List: <AddCarsContainer />
                 </div>
             </section>
 
