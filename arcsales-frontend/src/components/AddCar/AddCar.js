@@ -9,6 +9,7 @@ class AddCar extends Component {
       brand: '',
       year: '',
       new: false,
+      seats: '',
       price: '',
       color: '',
       image: ''
@@ -23,8 +24,10 @@ class AddCar extends Component {
     handleSubmit = event => {
       event.preventDefault();
       console.log(this.state);
-    //   const userId = localStorage.getItem('uid');
-      axios.post(`${process.env.REACT_APP_API_URL}/cars/new`, this.state, {
+      const user = localStorage.getItem('uid');
+      const newState = {...this.state, user};
+      console.log(newState);
+      axios.post(`${process.env.REACT_APP_API_URL}/cars/new`, newState, {
         withCredentials: true,
       })
       .then((res) => {
@@ -42,6 +45,7 @@ class AddCar extends Component {
         handleSubmit={this.handleSubmit} 
         car={this.state}
         user={this.state} 
+        seats={this.state}
         model={this.state.model}
         brand={this.state.brand}
         year={this.state.year}

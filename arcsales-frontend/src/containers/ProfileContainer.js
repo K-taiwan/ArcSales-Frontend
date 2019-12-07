@@ -6,6 +6,7 @@ import axios from 'axios';
 class ProfileContainer extends Component {
     state = {
         profile: {},
+        userCar: {},
     }
 
     componentDidMount() {
@@ -22,10 +23,10 @@ class ProfileContainer extends Component {
 
 
          // GET USER CARS
-        axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`, {
+        axios.get(`${process.env.REACT_APP_API_URL}/cars/get/${userId}`, {
             withCredentials: true,
         })
-            .then(res => console.log(res))
+            .then(res => console.log(res.data.data))
             .catch(err => console.log(err));
     }
 
@@ -41,6 +42,18 @@ class ProfileContainer extends Component {
                 });
             })
             .catch((err) => console.log(err));
+            
+
+        // GET USER CARS
+        // axios.get(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+        //     withCredentials: true,
+        // })
+        //     .then((res) => {
+        //         this.setState({
+        //             userCar: res.data.data
+        //         });
+        //     })
+        //     .catch((err) => console.log(err));
            
     }
 
@@ -67,7 +80,7 @@ class ProfileContainer extends Component {
                 
             
                 <div className="col wrap grid-wrapper">
-                    Your Car List: <AddCarsContainer />
+                    Your Car List: {this.state.userCar && <AddCarsContainer userCar={this.state.userCar} updateUserCar={this.updateUserCar}/>}
                 </div>
             </section>
 
