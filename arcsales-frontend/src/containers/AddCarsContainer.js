@@ -16,6 +16,7 @@ class AddCarsContainer extends Component {
         })
          .then((res) => {
              console.log(res)
+             console.log(this.state.addcar)
              this.setState({
                 car: res.data.data,
                 loaded: true
@@ -53,6 +54,9 @@ class AddCarsContainer extends Component {
                 <div className="wrap grid-wrapper">
                     <h4>{this.state.car.model}</h4>
                     {/* {this.state.car && <AddCar car={this.state}/>} */}
+                    {this.state.car.map((addcar) => (
+                    <AddCar name={ addcar.model } key={ addcar._id } />
+                ))}
                     <AddCar />
                 </div>
             </section>
