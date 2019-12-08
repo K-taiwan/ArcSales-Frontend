@@ -63,6 +63,12 @@ class ProfileContainer extends Component {
         })
     }
 
+    displayCar = (displayedCar) => {
+        this.setState({
+            useCar: displayedCar
+        })
+    }
+
     render() {
         return (
             <>
@@ -80,7 +86,7 @@ class ProfileContainer extends Component {
                 
             
                 <div className="col wrap grid-wrapper">
-                    Your Car List: {this.state.userCar && <AddCarsContainer userCar={this.state.userCar} updateUserCar={this.updateUserCar}/>}
+                    Your Car List: {this.state.userCar && <AddCarsContainer userCar={this.state.userCar} displayCar={this.displayCar}/>}
                 </div>
             </section>
 
