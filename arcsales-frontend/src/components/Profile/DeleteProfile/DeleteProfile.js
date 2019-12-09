@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import DeleteModal from './Modal/DeleteProfileModal';
 
@@ -20,12 +21,13 @@ class DeleteProfile extends Component {
         })
             .then((res) => {
                 console.log(res.data.message);
-                this.setState({ currentUser: null });
+                this.props.setCurrentUser(null);
                 localStorage.removeItem('uid');
                 this.props.history.push('/');
             })
             .catch((err) => console.log(err));
     };
+    
 
     render(){
         return(
@@ -34,4 +36,4 @@ class DeleteProfile extends Component {
     }
 };
 
-export default DeleteProfile;
+export default withRouter(DeleteProfile);

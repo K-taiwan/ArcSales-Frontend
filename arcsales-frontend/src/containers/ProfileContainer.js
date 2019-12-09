@@ -4,6 +4,8 @@ import AddCarsContainer from './AddCarsContainer';
 import ShowCar from '../components/ShowCar/ShowCar';
 import axios from 'axios';
 
+import './ProfileContainer.css';
+
 class ProfileContainer extends Component {
     state = {
         profile: {},
@@ -35,6 +37,8 @@ class ProfileContainer extends Component {
             .catch(err => console.log(err));
     }
 
+    
+
     componentDidUpdate(){
         const userId = localStorage.getItem('uid');
         // GET USER PROFILE
@@ -48,17 +52,6 @@ class ProfileContainer extends Component {
             })
             .catch((err) => console.log(err));
             
-
-        // GET USER CARS
-        // axios.get(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
-        //     withCredentials: true,
-        // })
-        //     .then((res) => {
-        //         this.setState({
-        //             userCar: res.data.data
-        //         });
-        //     })
-        //     .catch((err) => console.log(err));
            
     }
 
@@ -79,13 +72,13 @@ class ProfileContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    {this.state.profile && <Profile profile={this.state.profile} updateProfile={this.updateProfile}/>}
+                    {this.state.profile && <Profile profile={this.state.profile} updateProfile={this.updateProfile} setCurrentUser={this.props.setCurrentUser} />}
                 </div>
             </section>
             <br></br>
             <section className="row">
                 <div className="col wrap grid-wrapper">
-                    LeftSide
+                    Purchased Cars
                 </div>
         
                 
@@ -97,7 +90,7 @@ class ProfileContainer extends Component {
                             {
                                 this.state.userCar.map((data) => {
                                     return(
-                                        <ShowCar data={data} />
+                                        <ShowCar data={data} key={data._id}/>
                                     )
                                 })
                             }
@@ -115,17 +108,14 @@ export default ProfileContainer;
 
 
 
-{/* {<displayCar userCar={this.state.userCar} />} */}
+// addCar=(addCar)=>{
+    //     // make a axios post request.
+    //     // will receive a respond.
+
+    //     this.setState({
+    //         userCar : [...this.state.userCar, {res.data.data}]
+    //     })
+    // }
 
 
-                    {/* <div>
-                        <ul>
-                            {
-                                this.state.carArray.map((userCar, index) => {
-                                    return(
-                                        <ShowCar id={userCar.image} />
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div> */}
+    
