@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Profile from '../components/Profile/Profile';
 import AddCarsContainer from './AddCarsContainer';
+import ShowCar from '../components/ShowCar/ShowCar';
 import axios from 'axios';
 
 class ProfileContainer extends Component {
     state = {
         profile: {},
-        userCar: {},
+        userCar: [],
     }
 
     componentDidMount() {
@@ -26,7 +27,11 @@ class ProfileContainer extends Component {
         axios.get(`${process.env.REACT_APP_API_URL}/cars/get/${userId}`, {
             withCredentials: true,
         })
-            .then(res => console.log(res.data.data))
+        .then((res) => {
+            this.setState({
+               userCar: res.data.data,
+            });
+        })
             .catch(err => console.log(err));
     }
 
@@ -87,6 +92,17 @@ class ProfileContainer extends Component {
             
                 <div className="col wrap grid-wrapper">
                     Your Car List: {this.state.userCar && <AddCarsContainer userCar={this.state.userCar} displayCar={this.displayCar}/>}
+                    <div>
+                        <ul>
+                            {
+                                this.state.userCar.map((data) => {
+                                    return(
+                                        <ShowCar data={data} />
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -96,3 +112,20 @@ class ProfileContainer extends Component {
 }
 
 export default ProfileContainer;
+
+
+
+{/* {<displayCar userCar={this.state.userCar} />} */}
+
+
+                    {/* <div>
+                        <ul>
+                            {
+                                this.state.carArray.map((userCar, index) => {
+                                    return(
+                                        <ShowCar id={userCar.image} />
+                                    )
+                                })
+                            }
+                        </ul>
+                    </div> */}
