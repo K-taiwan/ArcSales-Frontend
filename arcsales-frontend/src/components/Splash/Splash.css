@@ -46,7 +46,7 @@ Header
 header {
 	background-image: url(https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg);
 	background-attachment: fixed;
-	height: 100vh;
+	height: 48vh;
 }
 
 /* ----------------------------------------
@@ -114,20 +114,17 @@ header h2 {
 	letter-spacing: 0.3rem;
 }
 
-header {
+/* header {
 	background-image: url(https://i.ytimg.com/vi/bNOldOVgaeE/maxresdefault.jpg);
 	background-size: cover;
 	background-position: center;
 
-/* 	padding-top: 6rem;
-	padding-bottom: 2.5rem; */
 
-	/* If there is a background-image */
 	height: 350px;
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
 
-}
+} */
 
 h1 a {
 	color: #44545E;
@@ -350,7 +347,7 @@ section {
 }
 
 .callout {
-	background-color: #CFF2F6;
+	background-color: rosybrown;
 }
 
 /* ----------------------------------------
@@ -506,7 +503,7 @@ input, textarea {
 Footer
 ------------------------------------------- */
 footer {
-	background-color: #CDF3F6;
+	background-color: rosybrown;
 	overflow: auto;
 }
 

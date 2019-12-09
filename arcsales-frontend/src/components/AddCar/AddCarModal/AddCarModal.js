@@ -40,10 +40,10 @@ function AddCarModal(props) {
                         <label htmlFor="seats">Seats</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="number" id="Seats" name="seats" value={props.car.seats} />
                     </div>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                         <label htmlFor="new">New</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="checkbox" id="New" name="new" value={props.car.new} />
-                    </div>
+                    </div> */}
                     <div className="form-group">
                         <label htmlFor="price">Price</label>
                         <input onChange={props.handleChange} className="form-control form-control-lg" type="number" id="Price" name="price" value={props.car.price} />
