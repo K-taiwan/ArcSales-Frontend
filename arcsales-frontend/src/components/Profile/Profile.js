@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EditProfile from './EditProfile/EditProfile';
+import DeleteProfile from './DeleteProfile/DeleteProfile';
 import './Profile.css';
 
 class Profile extends Component {
@@ -10,6 +11,8 @@ class Profile extends Component {
                 <h1>{this.props.profile.user && this.props.profile.user.firstName}'s Profile</h1>
                 </div>
                 {this.props.profile.user && <EditProfile user={this.props.profile.user} />}
+                {this.props.profile.user && <DeleteProfile user={this.props.profile.user} />}
+
             </section>
 
         )

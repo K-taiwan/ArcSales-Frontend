@@ -36,7 +36,7 @@ class App extends Component {
     render() {
       return (
         <>
-          <Navy currentUser={this.state.currentUser} logout={this.logout} setCurrentUser={this.setCurrentUser} />
+          <Navy currentUser={this.state.currentUser} logout={this.logout} setCurrentUser={this.setCurrentUser}/>
           <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
         </>
       );
