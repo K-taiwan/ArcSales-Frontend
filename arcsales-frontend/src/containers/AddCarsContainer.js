@@ -16,11 +16,13 @@ class AddCarsContainer extends Component {
         })
          .then((res) => {
              console.log(res)
-             console.log(this.state.addcar)
+             
+             
              this.setState({
                 car: res.data.data,
                 loaded: true
              });
+             console.log(this.state)
              console.log(this.state.car)
          })
          .catch((err) => console.log(err));
@@ -52,11 +54,12 @@ class AddCarsContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    <h4>{this.state.car.model}</h4>
+                    <h4>{this.state.car.brand}</h4>
                     {/* {this.state.car && <AddCar car={this.state}/>} */}
                     {this.state.car.map((addcar) => (
                     <AddCar name={ addcar.model } key={ addcar._id } />
                 ))}
+                
                     <AddCar />
                 </div>
             </section>
