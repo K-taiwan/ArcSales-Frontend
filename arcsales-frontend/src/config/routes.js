@@ -4,10 +4,10 @@ import Splash from '../components/Splash/Splash';
 import ProfileContainer from '../containers/ProfileContainer';
 import Car from '../components/Car/Car';
 
-export default ({currentUser, setCurrentUser}) => (
+export default ({ currentUser, setCurrentUser }) => (
     <Switch>
         <Route exact path='/' component={Splash} />
-        <Route path='/profile' component={ProfileContainer} />
+        <Route path='/profile' render={() => <ProfileContainer setCurrentUser={setCurrentUser} />} />
         <Route path='/car' component={Car} />
         <Route path='/logout' component={Splash}/>
     </Switch>

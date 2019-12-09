@@ -19,7 +19,8 @@ export default class ShowCar extends Component {
                     <br/>
                     Color = {this.props.data.color}
                     <br/>
-                    {this.props.data.image}
+                    <img className="car-img" src="http://clipart-library.com/images_k/silhouette-of-a-car/silhouette-of-a-car-7.jpg" alt="cars" width="300"/>
+                    
                     <hr/>
                 </li>
             </div>
