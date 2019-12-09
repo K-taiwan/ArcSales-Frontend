@@ -56,9 +56,7 @@ class AddCarsContainer extends Component {
                 <div className="wrap grid-wrapper">
                     <h4>{this.state.car.brand}</h4>
                     {/* {this.state.car && <AddCar car={this.state}/>} */}
-                    {this.state.car.map((addcar) => (
-                    <AddCar name={ addcar.model } key={ addcar._id } />
-                ))}
+                    
                 
                     <AddCar />
                 </div>
