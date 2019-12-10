@@ -10,15 +10,15 @@ import './Navy.css'
 const Navy = (props) => {
   return (
     
-    <header>
+    <nav>
       <Navbar bg="light" expand="lg">
-      <Navbar.Brand href="#home">ArcSales</Navbar.Brand>
+      <Navbar.Brand href="#home">ArcSales-Benz</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
-          <Nav.Link href="/car">Car</Nav.Link>
+          <Nav.Link href="/car">Gallery</Nav.Link>
           <li className="nav-item login-button">
               {!props.currentUser && <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />}
           </li>
@@ -29,16 +29,16 @@ const Navy = (props) => {
                 {props.currentUser &&  <button className="btn btn-warning" onClick={() => props.logout() }>Logout</button>}
           </li>
           <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Item href="https://mercedesblog.com/amg/">AMG Blog</NavDropdown.Item>
+            <NavDropdown.Item href="https://mbworld.org/">MB World</NavDropdown.Item>
+            <NavDropdown.Item href="https://www.benzinsider.com/category/amg/">Benz Archive</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+            <NavDropdown.Item href="https://www.cargurus.com/Cars/forsale-p2_a12062590?sourceContext=cargurus&type=GoogleAdWordsSearch&kw=cargurus&matchtype=e&ad=99438240780&placement=&type=GoogleAdWordsSearch&kw=cargurus&matchtype=e&ad=99438240780&placement=&networktype=g&device=c&devicemodel=&adposition=1t1&physloc=1014221&intloc=&aceid=&cid=141954540&agid=7773125700&tgtid=aud-462482486341:kwd-5133662569&fid=&gclid=Cj0KCQiA_rfvBRCPARIsANlV66N1VZ5h2PMBTb2pGD5xE1P9_RpuHy7Hlp0gg4_qHfOvipkXAVETsvMaApuxEALw_wcB">CarGurus</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
       </Navbar>
-    </header>
+    </nav>
     
   )
 };

@@ -1,0 +1,19 @@
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://i.pinimg.com/originals/33/f8/71/33f871f8d3b063196f8b1515c50edb4e.jpg);
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    padding: 5%;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    color: whitesmoke;
+
+}

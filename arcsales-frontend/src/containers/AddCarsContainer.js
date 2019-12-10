@@ -5,42 +5,47 @@ import axios from 'axios';
 class AddCarsContainer extends Component {
     state = {
         car: [],
+        loaded: false,
     }
 
     componentDidMount() {
         const userId = localStorage.getItem('uid');
+        
         axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`,{
             withCredentials: true,
         })
          .then((res) => {
+             console.log(res)
+             
+             
              this.setState({
                 car: res.data.data,
+                loaded: true
              });
+             console.log(this.state)
+             console.log(this.state.car)
          })
          .catch((err) => console.log(err));
-    }
-         // GET USER CARS
-        // axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`, {
-        //     withCredentials: true,
-        // })
-        //     .then(res => console.log(res))
-        //     .catch(err => console.log(err));
-        // }
+
+        }
+    
+        
+      // GET USER CARS
+
 
     // componentDidUpdate(){
     //     const userId = localStorage.getItem('uid');
-    //     // GET USER PROFILE
-    //     axios.get(`${process.env.REACT_APP_API_URL}/cars/create/${userId}`, {
+    //     axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`,{
     //         withCredentials: true,
     //     })
-    //         .then((res) => {
-    //             this.setState({
-    //                 car: res.data.data
-    //             });
-    //         })
-    //         .catch((err) => console.log(err));
-           
-    // }
+    //      .then((res) => {
+    //          this.setState({
+    //             car: res.data.data,
+    //          });
+    //      })
+    //      .catch((err) => console.log(err));
+
+    //     }
 
     
 
@@ -49,7 +54,11 @@ class AddCarsContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    {this.state.car && <AddCar car={this.state}/>}
+                    <h4>{this.state.car.brand}</h4>
+                    {/* {this.state.car && <AddCar car={this.state}/>} */}
+                    
+                
+                    <AddCar />
                 </div>
             </section>
 
