@@ -8,7 +8,7 @@ const Splash =() => {
             <header className="vertical-center">
 
                 <div>
-                    <h1><a href="">ArcSales</a></h1>
+                    <h1><a href="/">ArcSales</a></h1>
                     <h2>It Is Time For Another Ride!</h2>
                 </div>
             </header>
@@ -87,9 +87,9 @@ const Splash =() => {
             <footer className="text-muted text-center footer">
             <div className="wrap">
 			<div className="social-links">
-				<a href=""><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
-				<a href=""><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
-				<a href=""><i className="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://www.facebook.com/"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+				<a href="https://twitter.com/"><i className="fa fa-twitter-square" aria-hidden="true"></i></a>
+				<a href="https://www.instagram.com/"><i className="fa fa-instagram" aria-hidden="true"></i></a>
                     </div>
                     <input type="text" placeholder="Email Address" />
                     <button type="submit">Subscribe</button>

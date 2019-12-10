@@ -44,9 +44,10 @@
 Header
 ------------------------------------------- */
 header {
-	background-image: url(https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg);
-	background-attachment: fixed;
-	height: 48vh;
+	background: url(https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg) no-repeat center center fixed;
+	/* background-attachment: fixed; */
+	height: 100vh;
+	width: 100wh !important;
 }
 
 /* ----------------------------------------
@@ -353,11 +354,11 @@ section {
 /* ----------------------------------------
 Header
 ------------------------------------------- */
-header {
+/* header {
 	padding-top: 30px;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 nav {
 	position: fixed;
 	top: 0;

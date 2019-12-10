@@ -10,7 +10,7 @@ class AddCarsContainer extends Component {
 
     componentDidMount() {
         const userId = localStorage.getItem('uid');
-        console.log(userId)
+        
         axios.get(`${process.env.REACT_APP_API_URL}/cars/${userId}`,{
             withCredentials: true,
         })

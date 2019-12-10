@@ -10,7 +10,7 @@ import './Navy.css'
 const Navy = (props) => {
   return (
     
-    <header>
+    <nav>
       <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">ArcSales-Benz</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -18,7 +18,7 @@ const Navy = (props) => {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
-          <Nav.Link href="/car">Car</Nav.Link>
+          <Nav.Link href="#gallery">Gallery</Nav.Link>
           <li className="nav-item login-button">
               {!props.currentUser && <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />}
           </li>
@@ -38,7 +38,7 @@ const Navy = (props) => {
         </Nav>
       </Navbar.Collapse>
       </Navbar>
-    </header>
+    </nav>
     
   )
 };
