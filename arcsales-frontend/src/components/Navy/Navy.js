@@ -18,7 +18,7 @@ const Navy = (props) => {
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
-          <Nav.Link href="#gallery">Gallery</Nav.Link>
+          <Nav.Link href="/car">Gallery</Nav.Link>
           <li className="nav-item login-button">
               {!props.currentUser && <Login currentUser={props.currentUser} setCurrentUser={props.setCurrentUser} />}
           </li>
