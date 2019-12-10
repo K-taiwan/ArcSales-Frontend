@@ -7,10 +7,13 @@ const Splash =() => {
         <>
             <header className="vertical-center">
 
-                <div>
-                    <h1><a href="/">ArcSales</a></h1>
-                    <h2>It Is Time For Another Ride!</h2>
-                </div>
+                
+                    <img class="header-background-image" src="https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg"></img>
+                    <div className="header-intro">
+                        <h1><a href="/">ArcSales</a></h1>
+                        <h2>It Is Time For Another Ride!</h2>
+                    </div>
+                
             </header>
             <main>
             
@@ -21,7 +24,7 @@ const Splash =() => {
 
 
 
-            <section>
+            <section className="from-archive">
             <h2>From the Archive</h2>
 
             <div className="grid-wrapper articles">
@@ -70,7 +73,7 @@ const Splash =() => {
                 </div>
             </div>
         </section>
-        <section id="contact">
+        <section className="from-archive" id="contact">
             <div className="wrap">
             <h2>Get in Touch</h2>
                 <form className="contact">
