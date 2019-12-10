@@ -29,7 +29,7 @@ const Splash =() => {
 
 
             <section className="from-archive">
-            <h2>From the Archive</h2>
+            <h2>Expert Reviews</h2>
 
             <div className="grid-wrapper articles">
                 <article className="col-third">
