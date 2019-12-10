@@ -8,7 +8,7 @@ class Profile extends Component {
         return (
             <section>
                 <div className="profile-container hero-image">
-                <h1 className="title">
+                <h2 className="title">
                     FirstName: {this.props.profile.user && this.props.profile.user.firstName}
                     <br></br>
                     LastName: {this.props.profile.user && this.props.profile.user.lastName}
@@ -16,7 +16,7 @@ class Profile extends Component {
                     Email: {this.props.profile.user && this.props.profile.user.email}
 
                 
-                </h1>
+                </h2>
                 </div>
                 {this.props.profile.user && <EditProfile user={this.props.profile.user} />}
                 {this.props.profile.user && <DeleteProfile user={this.props.profile.user} setCurrentUser={this.props.setCurrentUser} />}
