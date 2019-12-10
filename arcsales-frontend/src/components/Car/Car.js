@@ -19,10 +19,7 @@ export default class CarGallery extends Component {
                 src="https://i.pinimg.com/736x/80/eb/c5/80ebc5bc8b537e83dfd28431dc3e875e.jpg"
                 alt="First slide"
                 />
-                <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
+                
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -31,10 +28,7 @@ export default class CarGallery extends Component {
                 alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
+                
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -43,10 +37,7 @@ export default class CarGallery extends Component {
                 alt="Third slide"
                 />
 
-                <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
+                
             </Carousel.Item>
             </Carousel>
         </section>
