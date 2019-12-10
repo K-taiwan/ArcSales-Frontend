@@ -12,7 +12,7 @@ export default class ShowCar extends Component {
             
 
             <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card.Img variant="top" src="https://comcar.co.uk/css/assets/img/vehicle-placeholder.png" />
             <Card.Body>
             <Card.Title>Card Title</Card.Title>
             <Card.Text>
@@ -27,7 +27,7 @@ export default class ShowCar extends Component {
                     <br/>
                     Color = {this.props.data.color}
                     <br/>
-                    <img className="car-img" src="http://clipart-library.com/images_k/silhouette-of-a-car/silhouette-of-a-car-7.jpg" alt="cars" width="300"/>
+                    {/* <img className="car-img" src="https://comcar.co.uk/css/assets/img/vehicle-placeholder.png" alt="cars" width="300"/> */}
                 </li>
                 <hr className="hr1"/>
             </Card.Text>
@@ -39,21 +39,3 @@ export default class ShowCar extends Component {
     }
 }
 
-{/* <div>
-                <li>
-                    Brand = {this.props.data.brand}
-                    <br/>
-                    Model = {this.props.data.model}
-                    <br/>
-                    Year = {this.props.data.year}
-                    <br/>
-                    Price = ${this.props.data.price}
-                    <br/>
-                    Color = {this.props.data.color}
-                    <br/>
-                    <img className="car-img" src="http://clipart-library.com/images_k/silhouette-of-a-car/silhouette-of-a-car-7.jpg" alt="cars" width="300"/>
-                    
-                    
-                </li>
-                <hr/>
-            </div> */}

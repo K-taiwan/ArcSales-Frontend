@@ -1,4 +1,8 @@
 import React from 'react';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+import Button from 'react-bootstrap/Button';
 import './Splash.css';
 
 const Splash =() => {
@@ -8,7 +12,7 @@ const Splash =() => {
             <header className="vertical-center">
 
                 
-                    <img class="header-background-image" src="https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg"></img>
+                    <img className="header-background-image" src="https://www.forcegt.com/wp-content/uploads/2012/08/mercedes-cls63-amg-wheelsandmore-2012-photo4.jpg"></img>
                     <div className="header-intro">
                         <h1><a href="/">ArcSales</a></h1>
                         <h2>It Is Time For Another Ride!</h2>
@@ -75,13 +79,51 @@ const Splash =() => {
         </section>
         <section className="from-archive" id="contact">
             <div className="wrap">
-            <h2>Get in Touch</h2>
+            <h2>Reach Out</h2>
                 <form className="contact">
-                    <input type="text" placeholder="Full Name" className="col-third"/>
+                    {/* <input type="text" placeholder="Full Name" className="col-third"/>
                     <input type="email" placeholder="Email" className="col-third" />
-                    <input type="text" placeholder="Subject" className="col-third" />
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button type="submit">Submit</button>
+                    <input type="text" placeholder="Subject" className="col-third" /> */}
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                            <InputGroup.Text>First and last name</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl />
+                        <FormControl />
+                    </InputGroup>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                        <InputGroup.Text id="inputGroup-sizing-default">Email</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                        />
+                    </InputGroup>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Prepend>
+                        <InputGroup.Text id="inputGroup-sizing-default">Subject</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                        />
+                    </InputGroup>
+                    <InputGroup>
+                        <InputGroup.Prepend>
+                        <InputGroup.Text>Message</InputGroup.Text>
+                        </InputGroup.Prepend>
+                        <FormControl as="textarea" aria-label="With textarea" />
+                    </InputGroup>
+                    <ButtonToolbar>
+                        <div>
+                        <Button variant="secondary" size="lg" block>
+                            Submit
+                        </Button>
+                        </div>
+                    </ButtonToolbar>
+                    {/* <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea> */}
+                    {/* <button type="submit">Submit</button> */}
                 </form>
             </div>
         </section>

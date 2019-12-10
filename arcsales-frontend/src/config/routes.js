@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Splash from '../components/Splash/Splash';
 import ProfileContainer from '../containers/ProfileContainer';
+// import Car from '../components/Car/Car';
+import CarsContainer from '../containers/CarsContainer';
 import Car from '../components/Car/Car';
 
 export default ({ currentUser, setCurrentUser }) => (
