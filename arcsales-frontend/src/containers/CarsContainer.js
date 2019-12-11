@@ -3,10 +3,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import CarGallery from '../components/Car/Car';
 
-class AddCarsContainer extends Component {
+class CarsContainer extends Component {
     state = {
-        car: [],
-        loaded: false,
+        cars: [],
     }
 
     componentDidMount() {
@@ -20,17 +19,15 @@ class AddCarsContainer extends Component {
              
              
              this.setState({
-                car: res.data.data,
-                loaded: true
+                cars: res.data.data,
              });
-             console.log(this.state)
-             console.log(this.state.car)
+            // console.log(this.state)
+             //console.log(this.state.cars)
          })
          .catch((err) => console.log(err));
 
         }
-    
-        
+
      
 
     render() {
@@ -38,11 +35,13 @@ class AddCarsContainer extends Component {
             <>
             <section className="col">
                 <div className="wrap grid-wrapper">
-                    <h4>{this.state.car}</h4>
+                    {/* <h4>{this.state.cars}</h4> */}
                     
-                    
+                    { this.state.cars.map(car => (
+                        <CarGallery car={ car }/>
+                    ))}
                 
-                    <CarGallery />
+                    
                 </div>
             </section>
 
@@ -53,4 +52,4 @@ class AddCarsContainer extends Component {
     }
 }
 
-export default AddCarsContainer;
+export default CarsContainer;

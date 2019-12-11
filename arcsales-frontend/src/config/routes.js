@@ -2,15 +2,15 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Splash from '../components/Splash/Splash';
 import ProfileContainer from '../containers/ProfileContainer';
-// import Car from '../components/Car/Car';
 import CarsContainer from '../containers/CarsContainer';
-import Car from '../components/Car/Car';
+// import CarsContainer from '../containers/CarsContainer';
+
 
 export default ({ currentUser, setCurrentUser }) => (
     <Switch>
         <Route exact path='/' component={Splash} />
         <Route path='/profile' render={() => <ProfileContainer setCurrentUser={setCurrentUser} />} />
-        <Route path='/car' component={Car} />
+        <Route path='/car' component={CarsContainer} />
         <Route path='/logout' component={Splash}/>
     </Switch>
 );
